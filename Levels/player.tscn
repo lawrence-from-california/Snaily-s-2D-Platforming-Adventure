@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbobgwkypxy3u"]
+[gd_scene load_steps=9 format=3 uid="uid://bbobgwkypxy3u"]
 
+[ext_resource type="Script" uid="uid://cqrl3th2clfqx" path="res://Levels/player.gd" id="1_cko2x"]
 [ext_resource type="Texture2D" uid="uid://djy5pflbxuxty" path="res://characters/DinoSprites - doux.png" id="1_vyvq2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fclrt"]
@@ -43,6 +44,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cko2x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_fclrt")
