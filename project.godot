@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Lawrence Mathew Seeberger_Turning Grimm"
-run/main_scene="uid://csnhkoxpvshwc"
+run/main_scene="uid://v1e5f6r8iqd"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

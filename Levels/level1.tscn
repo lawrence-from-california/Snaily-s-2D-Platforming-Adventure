@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bbobgwkypxy3u" path="res://Levels/player.tscn" id="3_8qa7p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fy36t"]
-size = Vector2(129, 129)
+size = Vector2(129, 128.58975)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8qa7p"]
 font = ExtResource("2_vrktg")
@@ -20,7 +20,8 @@ position = Vector2(-137, 277)
 texture = ExtResource("1_eh1xn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2(-137.5, 276.5)
+position = Vector2(-137.5, 276.7051)
+scale = Vector2(1, 0.99999994)
 shape = SubResource("RectangleShape2D_fy36t")
 
 [node name="Name" type="Label" parent="."]
@@ -37,4 +38,4 @@ zoom = Vector2(4, 4)
 
 [node name="Player" parent="." instance=ExtResource("3_8qa7p")]
 position = Vector2(-191, 221)
-scale = Vector2(0.90851146, 0.73241854)
+scale = Vector2(0.8739308, 0.76434124)
