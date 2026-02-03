@@ -6,6 +6,9 @@ const JUMP_VELOCITY:float = -333.0
 @onready var JUMP_COUNT: int = 1
 @onready var MAX_JUMP_COUNT: int = 1
 
+#func _ready(string):
+	#connect("jump", self, 0)
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -23,6 +26,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and JUMP_COUNT > 0:
 		velocity.y = JUMP_VELOCITY
 		JUMP_COUNT -=1
+		
+	
 
 
 	# Get the input direction and handle the movement/deceleration.
@@ -52,7 +57,3 @@ func _physics_process(delta: float) -> void:
 #func _process (_delta: float) -> void:
 	#if shape.is_colliding():
 		#print ("gold")
-
-
-func _on_area_2d_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	pass # Replace with function body.
