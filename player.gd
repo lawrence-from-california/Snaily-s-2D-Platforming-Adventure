@@ -1,0 +1,103 @@
+extends CharacterBody2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $graphics
+const SPEED:float = 200.0
+const JUMP_VELOCITY:float = -333.0
+@onready var JUMP_COUNT: int = 1
+@onready var MAX_JUMP_COUNT: int = 1
+var last_direction : float = 0
+@onready var canis_latrans: Timer = $CanisLatrans
+var coyoteactivate: bool = false
+
+#func_ready():
+	#$elixir.connect("jump", self, 0)
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+	else:
+		JUMP_COUNT=MAX_JUMP_COUNT
+
+	# Handle jump.
+	if is_on_floor():
+		if coyoteactivate:
+			coyoteactivate = false
+			canis_latrans.stop()
+	if velocity.y < 0.0:
+			if Input.is_action_just_released("jump"):
+				velocity.y *= 0.2
+	elif velocity.y < 0.0:
+		if Input.is_action_just_released("jump"):
+			velocity.y *= 0.7
+		if !coyoteactivate:
+			canis_latrans.start()
+			coyoteactivate = true
+	if Input.is_action_just_pressed("jump") and (!canis_latrans.is_stopped() or is_on_floor()):
+		velocity.y = JUMP_VELOCITY
+		canis_latrans.stop()
+		coyoteactivate=true
+	
+		
+			
+	#if Input.is_action_just_pressed("jump") and is_on_floor():
+		#velocity.y = JUMP_VELOCITY
+		#JUMP_COUNT=MAX_JUMP_COUNT
+		#JUMP_COUNT -=1
+		#
+	#if Input.is_action_just_pressed("jump") and JUMP_COUNT > 0:
+		velocity.y = JUMP_VELOCITY
+		JUMP_COUNT -=1
+	
+	
+	
+
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction:float = Input.get_axis("move_left", "move_right")
+	last_direction=direction
+
+	
+	
+	#apply movement
+	if direction:
+		velocity.x = direction * SPEED
+	
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	if direction < 0:
+		animated_sprite_2d.flip_h = true
+			
+	elif direction > 0:
+		animated_sprite_2d.flip_h = false
+	
+
+	
+
+	move_and_slide()
+	
+	
+	#move animations
+	handle_animation()
+	
+func handle_animation() -> void:
+	
+	if is_on_floor() and last_direction ==0:
+		animated_sprite_2d.play("idle")
+		
+	elif is_on_floor() and last_direction != 0:
+		animated_sprite_2d.play("run")
+		
+	else:
+		animated_sprite_2d.play("jump")
+		
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if Input.is_action_pressed("jump"):
+		velocity.y = JUMP_VELOCITY
+		
+	else:
+		velocity.y = (JUMP_VELOCITY/2)
+	move_and_slide()
