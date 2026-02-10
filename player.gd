@@ -4,7 +4,7 @@ class_name MainCharacter
 const SPEED:float = 200.0
 const JUMP_VELOCITY:float = -333.0
 @onready var JUMP_COUNT: int = 1
-@onready var MAX_JUMP_COUNT: int = 1
+var MAX_JUMP_COUNT: int = 1
 var last_direction : float = 0
 @onready var canis_latrans: Timer = $CanisLatrans
 var coyoteactivate: bool = false
