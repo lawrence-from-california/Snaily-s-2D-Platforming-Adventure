@@ -1,17 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddmqir1by4r8j"]
+[gd_scene format=3 uid="uid://ddmqir1by4r8j"]
 
-[ext_resource type="Texture2D" uid="uid://bggjbc800q8fp" path="res://tilesets/props.png" id="1_mi635"]
+[ext_resource type="Texture2D" uid="uid://bl6fp70snp20t" path="res://characters/Cloud 1.png" id="1_nlgqw"]
+[ext_resource type="Texture2D" uid="uid://cxxg8yospohpx" path="res://characters/Cloud 2.png" id="2_507ja"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n1ckp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nlgqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_507ja")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8bxr"]
 size = Vector2(32, 16)
 
-[node name="Platform" type="AnimatableBody2D"]
+[node name="Platform" type="AnimatableBody2D" unique_id=926225892]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_mi635")
-region_enabled = true
-region_rect = Rect2(256, 191, 32, 16)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=929762518]
+sprite_frames = SubResource("SpriteFrames_n1ckp")
+autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=259698033]
 shape = SubResource("RectangleShape2D_s8bxr")
 one_way_collision = true

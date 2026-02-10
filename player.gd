@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name MainCharacter
 @onready var animated_sprite_2d: AnimatedSprite2D = $graphics
 const SPEED:float = 200.0
 const JUMP_VELOCITY:float = -333.0
@@ -16,39 +17,33 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	else:
-		JUMP_COUNT=MAX_JUMP_COUNT
 
 	# Handle jump.
 	if is_on_floor():
 		if coyoteactivate:
 			coyoteactivate = false
 			canis_latrans.stop()
-	if velocity.y < 0.0:
-			if Input.is_action_just_released("jump"):
-				velocity.y *= 0.2
-	elif velocity.y < 0.0:
-		if Input.is_action_just_released("jump"):
-			velocity.y *= 0.7
+	else:
 		if !coyoteactivate:
 			canis_latrans.start()
 			coyoteactivate = true
+	if velocity.y < 0.0:
+		if Input.is_action_just_released("jump"):
+			velocity.y *= 0.5
+		
 	if Input.is_action_just_pressed("jump") and (!canis_latrans.is_stopped() or is_on_floor()):
 		velocity.y = JUMP_VELOCITY
 		canis_latrans.stop()
 		coyoteactivate=true
-	
-		
-			
-	#if Input.is_action_just_pressed("jump") and is_on_floor():
-		#velocity.y = JUMP_VELOCITY
-		#JUMP_COUNT=MAX_JUMP_COUNT
-		#JUMP_COUNT -=1
-		#
-	#if Input.is_action_just_pressed("jump") and JUMP_COUNT > 0:
+	elif Input.is_action_just_pressed("jump") and JUMP_COUNT > 1 and canis_latrans.is_stopped() and !is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		JUMP_COUNT -=1
 	
+	if is_on_floor() or  !canis_latrans.is_stopped():
+		JUMP_COUNT = MAX_JUMP_COUNT
+		
+	
+	#
 	
 	
 
@@ -94,10 +89,14 @@ func handle_animation() -> void:
 		animated_sprite_2d.play("jump")
 		
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
+func _on_area_2d_area_entered(_area: Area2D) -> void:
 	if Input.is_action_pressed("jump"):
 		velocity.y = JUMP_VELOCITY
 		
 	else:
 		velocity.y = (JUMP_VELOCITY/2)
 	move_and_slide()
+	
+func add_jumps (jumps : int) -> void:
+	MAX_JUMP_COUNT += jumps
+	print (MAX_JUMP_COUNT)

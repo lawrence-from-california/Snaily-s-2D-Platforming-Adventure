@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf613bjy8fns1"
-path="res://.godot/imported/Tumbleweeb 3.png-1c57b55f8a99217dd838799b56ce4e50.ctex"
+uid="uid://2x1uswrvbew7"
+path="res://.godot/imported/SuperDiamond2.png-4b128b84dfe283dd11e16102befc841a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Tumbleweeb 3.png"
-dest_files=["res://.godot/imported/Tumbleweeb 3.png-1c57b55f8a99217dd838799b56ce4e50.ctex"]
+source_file="res://characters/SuperDiamond2.png"
+dest_files=["res://.godot/imported/SuperDiamond2.png-4b128b84dfe283dd11e16102befc841a.ctex"]
 
 [params]
 

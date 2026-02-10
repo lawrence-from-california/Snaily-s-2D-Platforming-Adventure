@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c60cu3hyibdpa"
-path="res://.godot/imported/Tumbleweed.png-d77f7dc1d2b94b2e7b0b566cb22809d9.ctex"
+uid="uid://cxxg8yospohpx"
+path="res://.godot/imported/Cloud 2.png-1938ed4e12775257f3fb0ee759eaed7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Tumbleweed.png"
-dest_files=["res://.godot/imported/Tumbleweed.png-d77f7dc1d2b94b2e7b0b566cb22809d9.ctex"]
+source_file="res://characters/Cloud 2.png"
+dest_files=["res://.godot/imported/Cloud 2.png-1938ed4e12775257f3fb0ee759eaed7d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://plhr1pr8l8dp"
-path="res://.godot/imported/Tumbleweeb4.png-148a3eeb4c5470d9fef0b3b0a40894ce.ctex"
+uid="uid://b5qrusqnbjupq"
+path="res://.godot/imported/BADBUSH2.png-a7ff27260e6145bc55f682321bbd1be1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Tumbleweeb4.png"
-dest_files=["res://.godot/imported/Tumbleweeb4.png-148a3eeb4c5470d9fef0b3b0a40894ce.ctex"]
+source_file="res://enemies/BADBUSH2.png"
+dest_files=["res://.godot/imported/BADBUSH2.png-a7ff27260e6145bc55f682321bbd1be1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buhfpuauk3f2i"
-path="res://.godot/imported/Madflower1.png-f77ac8f099587302a8554cd4808af7bb.ctex"
+uid="uid://d86mxhuauadp"
+path="res://.godot/imported/Slime2.png-9bf414f25e4846b864a2e23423265b25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Madflower1.png"
-dest_files=["res://.godot/imported/Madflower1.png-f77ac8f099587302a8554cd4808af7bb.ctex"]
+source_file="res://characters/Slime2.png"
+dest_files=["res://.godot/imported/Slime2.png-9bf414f25e4846b864a2e23423265b25.ctex"]
 
 [params]
 

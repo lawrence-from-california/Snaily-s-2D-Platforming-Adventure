@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd7nh1aogx2ne"
-path="res://.godot/imported/BADBUSH1.png-0b549987d891f8e11d75a1dea6c4442a.ctex"
+uid="uid://khg0lrmfodb7"
+path="res://.godot/imported/Tumbleweed3.png-af79a0d43234d5ece0d59cdcf81d85b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/BADBUSH1.png"
-dest_files=["res://.godot/imported/BADBUSH1.png-0b549987d891f8e11d75a1dea6c4442a.ctex"]
+source_file="res://characters/Tumbleweed3.png"
+dest_files=["res://.godot/imported/Tumbleweed3.png-af79a0d43234d5ece0d59cdcf81d85b9.ctex"]
 
 [params]
 

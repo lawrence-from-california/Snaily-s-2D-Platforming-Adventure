@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b621be71mki5n"
-path="res://.godot/imported/Madflower2.png-d56e5b63581424bc40a9f8523943c452.ctex"
+uid="uid://dn4oouj0wedov"
+path="res://.godot/imported/Background 2.png-bf1b7ae34c9b907abbea8a882fe6d493.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Madflower2.png"
-dest_files=["res://.godot/imported/Madflower2.png-d56e5b63581424bc40a9f8523943c452.ctex"]
+source_file="res://Background 2.png"
+dest_files=["res://.godot/imported/Background 2.png-bf1b7ae34c9b907abbea8a882fe6d493.ctex"]
 
 [params]
 

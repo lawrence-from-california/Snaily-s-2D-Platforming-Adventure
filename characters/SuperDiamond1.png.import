@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5qrusqnbjupq"
-path="res://.godot/imported/BADBUSH2.png-24fd4939a4cd5569caebd9a71b2d7bea.ctex"
+uid="uid://dijr8wuuxma4p"
+path="res://.godot/imported/SuperDiamond1.png-94c0b09311625aa5d22804275d6d7f93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/BADBUSH2.png"
-dest_files=["res://.godot/imported/BADBUSH2.png-24fd4939a4cd5569caebd9a71b2d7bea.ctex"]
+source_file="res://characters/SuperDiamond1.png"
+dest_files=["res://.godot/imported/SuperDiamond1.png-94c0b09311625aa5d22804275d6d7f93.ctex"]
 
 [params]
 

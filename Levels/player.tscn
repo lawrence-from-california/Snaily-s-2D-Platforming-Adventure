@@ -75,7 +75,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rgs0"]
-size = Vector2(5, 3)
+size = Vector2(7.5, 3)
 
 [node name="Player" type="CharacterBody2D" unique_id=1749316360]
 collision_layer = 2
@@ -90,18 +90,17 @@ sprite_frames = SubResource("SpriteFrames_7uhkg")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.6440065
-flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1247590436]
 collision_layer = 8
 collision_mask = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1932386970]
-position = Vector2(1, 8)
+position = Vector2(-0.25, 8)
 shape = SubResource("RectangleShape2D_5rgs0")
 
 [node name="CanisLatrans" type="Timer" parent="." unique_id=901586338]
-wait_time = 0.15
+wait_time = 0.12
 one_shot = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

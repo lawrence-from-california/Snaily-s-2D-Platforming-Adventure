@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://baspgqd7g8meh"]
 
-[ext_resource type="Script" uid="uid://be2euguqcce18" path="res://scenes/elixir.gd" id="1_q33w5"]
+[ext_resource type="Script" uid="uid://be2euguqcce18" path="res://scripts/elixir.gd" id="1_q33w5"]
 [ext_resource type="Texture2D" uid="uid://5fs56le7heh6" path="res://tilesets/Elixir of Death.png" id="1_s3alh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q33w5"]
